@@ -1,32 +1,32 @@
-#Reverse a String - Enter a string and the program will reverse it and print it out.
+#Reverse a String 2 ways
+----------------------------------------------------------------------
+       
+#1. Reverse a string using loop
 
-def rev_str(s):
-        
-    str_iter = iter(s)
-    rev_str = ''
-    i = len(s)
+def rev_str(s):        
+  str = ''
     
-    for i in range(len(s)):
-        rev_str = rev_str + s[-i-1]        
-    print rev_str
+  for i in range(len(s)):
+    str = str + s[-i-1]        
+  return str
+  
+s = input("Enter a string :")	
 
-"""
+print ("\nThe original string  is : " + s)
+ 
+print ("\nThe reversed string is : " + rev_str(s))
 
-Another way:
-numbers = 'Nila'
-string = ''
-for i in range(len(numbers)-1,-1,-1):
-    string += numbers[i]
-print string 
+------------------------------------------------------------------------- 
 
-"""
+#2. Reverse a string using slice syntax
 
-def get_input():
-    s = raw_input("Enter a string: ")
-    return s
+def rev_str(string):
+    string = string[::-1]
+    return string
 
-if __name__ == '__main__':
-    s = get_input()
-    rev_str(s)
-        
+s = input("Enter a string :")	
+
+print ("\nThe original string  is : " + s)
+ 
+print ("\nThe reversed string is : " + rev_str(s))
         
